@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gye.mapper.DetailMapper">
+    <insert id="save" parameterType="detail">
+        insert into detail values(#{id},#{numtype},#{num},#{pid},#{uid},#{paynum},#{sum})
+    </insert>
+    <select id="findAll" resultType="detail">
+        select * from detail
+    </select>
+    <delete id="del" parameterType="int">
+		delete from detail where id = #{id}
+	</delete>
+
+    <select id="update" resultType="detail" parameterType="int">
+        select * from detail where id = #{id}
+    </select>
+
+    <update id="updateEntity" parameterType="detail">
+    update detail
+    set
+      detail.numtype = #{numtype,jdbcType=VARCHAR},
+      detail.num = #{num,jdbcType=INTEGER},
+      detail.pid = #{pid,jdbcType=INTEGER},
+      detail.uid = #{uid,jdbcType=INTEGER},
+      detail.paynum = #{paynum,jdbcType=INTEGER},
+      detail.sum = #{sum,jdbcType=INTEGER}
+    where detail.id = #{id}
+    </update>
+
+</mapper>

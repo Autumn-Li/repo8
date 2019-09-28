@@ -11,7 +11,7 @@ http://www.springframework.org/schema/context
 http://www.springframework.org/schema/context/spring-context.xsd">
 
     <!--组件扫描  主要扫描controller-->
-    <context:component-scan base-package="com.itheima.controller"></context:component-scan>
+    <context:component-scan base-package="com.gye.controller"></context:component-scan>
     <!--配置mvc注解驱动-->
     <mvc:annotation-driven></mvc:annotation-driven>
     <!--内部资源视图解析器-->

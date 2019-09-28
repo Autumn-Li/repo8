@@ -9,8 +9,8 @@
 
     <!--定义别名-->
     <typeAliases>
-        <!--<typeAlias type="com.itheima.domain.Account" alias="account"></typeAlias>-->
-        <package name="com.itheima.domain"></package>
+        <!--<typeAlias type="com.gye.domain.Detail" alias="account"></typeAlias>-->
+        <package name="com.gye.domain"></package>
     </typeAliases>
 
     <!--环境-->
@@ -29,7 +29,7 @@
     <!--加载映射-->
     <mappers>
         <!--<mapper resource="com/itheima/mapper/AccountMapper.xml"></mapper>-->
-        <package name="com.itheima.mapper"></package>
+        <package name="com.gye.mapper"></package>
     </mappers>
 
 
