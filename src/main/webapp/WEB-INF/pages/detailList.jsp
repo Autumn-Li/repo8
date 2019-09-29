@@ -3,21 +3,66 @@
 <html>
 <head>
     <title>Title</title>
+
+    <style>
+        .time1 {
+            width: 100%;
+            height: 50px;
+            background: #FFF000;
+            line-height: 50px;
+            text-align: center;
+        }
+    </style>
+
 </head>
+
+<script language="javascript">
+
+    var t = null;
+    t = setTimeout(time, 1000);//开始执行
+    function time() {
+        clearTimeout(t);//清除定时器
+        dt = new Date();
+        var y = dt.getYear() + 1900;
+        var mm = dt.getMonth() + 1;
+        var d = dt.getDate();
+        var weekday = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
+        var day = dt.getDay();
+        var h = dt.getHours();
+        var m = dt.getMinutes();
+        var s = dt.getSeconds();
+        if (h < 10) {
+            h = "0" + h;
+        }
+        if (m < 10) {
+            m = "0" + m;
+        }
+        if (s < 10) {
+            s = "0" + s;
+        }
+        document.getElementById("timeShow").innerHTML = "现在的时间为：" + y + "年" + mm + "月" + d + "日" + weekday[day] + "" + h + ":" + m + ":" + s + "";
+        t = setTimeout(time, 1000); //设定定时器，循环执行
+    }
+</script>
 
 <script>
     <%--删除--%>
+
     function del(id) {
         if (confirm("您确定删除吗?")) {
             location.href = "${pageContext.request.contextPath}/detail/del/" + id;
         }
     }
+
     function update(id) {
         location.href = "${pageContext.request.contextPath}/detail/update/" + id;
     }
 </script>
 
 <body>
+
+<div id="timeShow" class="time1"></div>
+
 <center>
     <h1>展示收费明细数据列表</h1>
     <table border="1">
