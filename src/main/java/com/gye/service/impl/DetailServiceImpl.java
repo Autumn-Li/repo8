@@ -5,7 +5,6 @@ import com.gye.domain.Paytype;
 import com.gye.mapper.DetailMapper;
 import com.gye.mapper.PaytypeMapper;
 import com.gye.service.DetailService;
-import com.sun.xml.internal.bind.v2.model.core.ID;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

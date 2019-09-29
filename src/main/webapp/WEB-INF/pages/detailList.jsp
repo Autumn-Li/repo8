@@ -30,6 +30,7 @@
             <th>收费次数</th>
             <th>金额</th>
             <th>修改</th>
+            <th>添加</th>
             <th>删除</th>
         </tr>
 
@@ -44,6 +45,9 @@
                 <td>${detail.sum}</td>
                 <td class="text-center">
                     <a href="javascript:void(0);" onclick="update(${detail.id})">修改</a>
+                </td>
+                <td class="text-center">
+                    <a href="../../save.jsp">添加</a>
                 </td>
                 <td class="text-center">
                     <a href="javascript:void(0);" onclick="del(${detail.id})">删除</a>

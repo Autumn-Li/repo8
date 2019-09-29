@@ -11,7 +11,7 @@ public interface DetailMapper {
 
     List<Detail> findAll();
 
-    void  del(int id);
+    void del(int id);
 
     Detail update(@Param("id") int id);
 
